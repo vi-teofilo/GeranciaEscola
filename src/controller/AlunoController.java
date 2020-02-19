@@ -17,31 +17,29 @@ import model.Aluno;
 import model.Data;
 
 public class AlunoController {
-
-
 	public void inserirAluno(String matricula,String nome, Data data,char sexo) {
 //	recebe as informações dos alunos e salva
 		
 		
-	Aluno aluno1 = new Aluno();
+	Aluno aluno = new Aluno();
 	Data d1 = new Data();
-	aluno1.setMatricula(matricula);
-	aluno1.setNome(nome);
-	aluno1.setDataNasc(d1);
-	aluno1.setSexo(sexo);
+	aluno.setMatricula(matricula);
+	aluno.setNome(nome);
+	aluno.setDataNasc(d1);
+	aluno.setSexo(sexo);
 		 	
 		File arquivo = new File("aluno.txt");
 		  FileOutputStream arquivoOutput;	  
 		try {
 			arquivoOutput = new FileOutputStream(arquivo,true);
 			PrintStream gravador = new PrintStream(arquivoOutput);
-			  gravador.print(aluno1.getMatricula());
+			  gravador.print(aluno.getMatricula());
 			  gravador.print((";"));
-			  gravador.print(aluno1.getNome());
+			  gravador.print(aluno.getNome());
 			  gravador.print((";"));
-			  gravador.print(aluno1.getDataNasc());
+			  gravador.print(aluno.getDataNasc());
 			  gravador.print((";"));
-			  gravador.print(aluno1.getSexo());
+			  gravador.print(aluno.getSexo());
 			  gravador.print(("\n"));
 			
   
@@ -64,8 +62,8 @@ public class AlunoController {
 		try {		
 			InputStream is = new FileInputStream("aluno.txt");
 			InputStreamReader isr = new InputStreamReader(is);
-			BufferedReader aluno1 = new BufferedReader(isr);
-			String texto = aluno1.readLine();
+			BufferedReader aluno = new BufferedReader(isr);
+			String texto = aluno.readLine();
 			 
 			while (texto !=null) { 
 				String dados[] = texto.split(";");
@@ -74,7 +72,7 @@ public class AlunoController {
 				System.out.println("O nome do aluno:"+dados[1]);
 				System.out.println("A Data de Nascimento do aluno:"+dados[2]);
 				System.out.println("O sexo do aluno:"+dados[3]+"\n");
-				texto = aluno1.readLine();
+				texto = aluno.readLine();
 				
 				
 			} 
@@ -91,8 +89,8 @@ public class AlunoController {
 		try {		
 			InputStream is = new FileInputStream("aluno.txt");
 			InputStreamReader isr = new InputStreamReader(is);
-			BufferedReader aluno1 = new BufferedReader(isr);
-			String texto = aluno1.readLine();
+			BufferedReader aluno = new BufferedReader(isr);
+			String texto = aluno.readLine();
 			 
 			while (texto !=null) { 
 				String dados[] = texto.split(";");
@@ -105,7 +103,7 @@ public class AlunoController {
 					System.out.println("O sexo do aluno:"+dados[3]+"\n");
 						
 				}
-				texto = aluno1.readLine();
+				texto = aluno.readLine();
 				
 				
 			} 

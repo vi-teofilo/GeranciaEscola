@@ -1,6 +1,7 @@
 
 import controller.AlunoController;
 import controller.ProfessorController;
+import model.Data;
 import view.AlunoView;
 
 /* Classe criada para adicionar e mostrar valor  
@@ -17,9 +18,9 @@ public class Main {
 //		 p1.testaProfessor();		
 //		
 		AlunoController aluno = new AlunoController();
-//		aluno.inserirAluno();
-//		aluno.listarTodos();		
-//		aluno.listarAniversariantes(12);
+//		aluno.inserirAluno(null, null, null, 0);
+//	    aluno.listarTodos();		
+//	    aluno.listarAniversariantes(12);
 		new AlunoView();
 	}
 	
