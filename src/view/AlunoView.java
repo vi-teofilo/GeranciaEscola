@@ -37,7 +37,7 @@ public class AlunoView {
 
 		janela = new JFrame("Cadastro Aluno");
 		janela.setTitle("Cadastro Aluno");
-		janela.setSize(700, 200);
+		janela.setSize(300, 700);
 		janela.getContentPane().setLayout(null);
 		janela.setLocationRelativeTo(null);
 

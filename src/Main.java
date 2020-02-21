@@ -1,8 +1,8 @@
+import javax.swing.UIManager;
 
 import controller.AlunoController;
-import controller.ProfessorController;
-import model.Data;
-import view.AlunoView;
+import view.EstadoView;
+import view.MenuView;
 
 /* Classe criada para adicionar e mostrar valor  
 * @author vfurtado
@@ -17,11 +17,21 @@ public class Main {
 //		ProfessorController p1 = new ProfessorController();
 //		 p1.testaProfessor();		
 //		
-		AlunoController aluno = new AlunoController();
+//		AlunoController aluno = new AlunoController();
 //		aluno.inserirAluno(null, null, null, 0);
 //	    aluno.listarTodos();		
 //	    aluno.listarAniversariantes(12);
-		new AlunoView();
+		
+		try {
+			UIManager
+					.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+//		new AlunoView1();
+//	new CidadeView().cidadeView();
+//	new EstadoView().estadoView();
+		new MenuView().iniciaMenu();
 	}
 	
 	

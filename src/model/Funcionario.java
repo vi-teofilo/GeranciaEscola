@@ -7,50 +7,108 @@ package model;
 */
 //Classe Carro com seus atributos
 public class Funcionario {
+	private int id;
 	private String nome;
-	private String CPF;
+	private String cpf;
 	private double salario;
-
+	private Data dataNasc;
+	private Endereco endereco;
+	private String telefone;
+	
+	
 	public Funcionario() {
 		System.out.println("Funcionario criado!");
 		
 		
 	}
-
-	public Funcionario(String nome, String cPF, double salario) {
-
-		this.nome = nome;
-		CPF = cPF;
-		this.salario = salario;
+	
+	public int getId() {
+		return id;
 	}
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
 
 	public String getNome() {
 		return nome;
 	}
 
+
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
-	public String getCPF() {
-		return CPF;
+
+
+	public String getCpf() {
+		return cpf;
 	}
 
-	public void setCPF(String cPF) {
-		CPF = cPF;
+
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
+
+
 
 	public double getSalario() {
 		return salario;
 	}
 
+
+
 	public void setSalario(double salario) {
 		this.salario = salario;
 	}
-	
+
+
+
+	public Data getDataNasc() {
+		return dataNasc;
+	}
+
+
+
+	public void setDataNasc(Data dataNasc) {
+		this.dataNasc = dataNasc;
+	}
+
+
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+
+
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+
+
 	public void exibe(){
 		System.out.println("Nome do Funcionario: "+nome);
-		System.out.println("CPF do Funcionario: "+CPF);
+		System.out.println("CPF do Funcionario: "+cpf);
 		System.out.println("Salario do Funcionario: "+salario);
 		
 	

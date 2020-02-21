@@ -17,6 +17,7 @@ import model.Aluno;
 import model.Data;
 
 public class AlunoController {
+	 
 	public void inserirAluno(String matricula,String nome, Data data,char sexo) {
 //	recebe as informações dos alunos e salva
 		
